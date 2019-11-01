@@ -30,7 +30,7 @@ class HomeController extends Controller
      public function datatable()
      {
         $users = User::all();
-        return $users;
+        // return $users;
 
      }
 }

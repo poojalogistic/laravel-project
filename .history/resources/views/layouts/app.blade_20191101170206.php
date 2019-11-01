@@ -11,9 +11,9 @@
 
     <!-- Scripts -->
     <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,38 +22,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"/>
 
 <script>
 $(document).ready(function() {
-    // $('#example1').DataTable({
-    //     // processing: true,
-    //     // serverSide: true,
-    //     // ajax:{
-    //     // url: "{{ url('datatable') }}",
-    //     // columns:[
-    //     //     {
-    //     //         data: 'id',
-    //     //         name: 'id'
-    //     //     },
-    //     //     {
-    //     //         data: 'name',
-    //     //         name: 'name'
-    //     //     },
-    //     //     {
-    //     //         data: 'email',
-    //     //         name: 'email'
-    //     //     }
-    //     //     ]
-    //     },
-    // });
-
     $('#example1').DataTable({
-                  processing: true,
-                  serverSide: true,
-                  ajax:{url:"{{ url('datatable') }}",dataSrc:""}
-            }
-    );
+        // processing: true,
+        // serverSide: true,
+        ajax:{
+        url: "{{ url('datatable') }}",
+        },
+    });
 } );
 </script>
 </head>

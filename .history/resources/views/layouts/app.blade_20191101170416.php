@@ -22,38 +22,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"/>
 
 <script>
 $(document).ready(function() {
-    // $('#example1').DataTable({
-    //     // processing: true,
-    //     // serverSide: true,
-    //     // ajax:{
-    //     // url: "{{ url('datatable') }}",
-    //     // columns:[
-    //     //     {
-    //     //         data: 'id',
-    //     //         name: 'id'
-    //     //     },
-    //     //     {
-    //     //         data: 'name',
-    //     //         name: 'name'
-    //     //     },
-    //     //     {
-    //     //         data: 'email',
-    //     //         name: 'email'
-    //     //     }
-    //     //     ]
-    //     },
-    // });
-
     $('#example1').DataTable({
-                  processing: true,
-                  serverSide: true,
-                  ajax:{url:"{{ url('datatable') }}",dataSrc:""}
-            }
-    );
+        // processing: true,
+        // serverSide: true,
+        ajax:{
+        url: "{{ url('datatable') }}",
+        },
+    });
 } );
 </script>
 </head>

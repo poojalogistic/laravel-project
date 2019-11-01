@@ -16,7 +16,7 @@
 
                     You are logged in!
 
-                    <table id="example1" class="display" cellspacing="0" width="100%">
+                    <table id="example" class="display" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -32,10 +32,15 @@
                             <th>Email</th>
                         </tr>
                     </tfoot>
-                    <tbody>
+                    <table class="table table-bordered display" cellspacing="0" width="100%" id="UserTable">
                   
-                    
-                    </tbody>
+                    @foreach($users as $key => $data)
+                        <tr>    
+                        <th>{{$data->id}}</th>
+                        <th>{{$data->name}}</th>
+                        <th>{{$data->email}}</th>                
+                        </tr>
+                    @endforeach
                     </table>
                 </div>
             </div>

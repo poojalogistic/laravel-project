@@ -24,13 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // $users = User::all();
+
+        return view('home')->with('name', 'pooja');
+
     }
 
      public function datatable()
      {
-        $users = User::all();
-        return $users;
-
+       
      }
 }

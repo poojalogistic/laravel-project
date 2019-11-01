@@ -33,8 +33,14 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                  
-                    
+<!--                   
+                    @foreach($name as $key => $data)
+                        <tr>    
+                        <th>{{$data->id}}</th>
+                        <th>{{$data->name}}</th>
+                        <th>{{$data->email}}</th>                
+                        </tr>
+                    @endforeach -->
                     </tbody>
                     </table>
                 </div>

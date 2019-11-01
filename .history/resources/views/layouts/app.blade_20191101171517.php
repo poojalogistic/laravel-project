@@ -26,34 +26,14 @@
 
 <script>
 $(document).ready(function() {
-    // $('#example1').DataTable({
-    //     // processing: true,
-    //     // serverSide: true,
-    //     // ajax:{
-    //     // url: "{{ url('datatable') }}",
-    //     // columns:[
-    //     //     {
-    //     //         data: 'id',
-    //     //         name: 'id'
-    //     //     },
-    //     //     {
-    //     //         data: 'name',
-    //     //         name: 'name'
-    //     //     },
-    //     //     {
-    //     //         data: 'email',
-    //     //         name: 'email'
-    //     //     }
-    //     //     ]
-    //     },
-    // });
-
     $('#example1').DataTable({
-                  processing: true,
-                  serverSide: true,
-                  ajax:{url:"{{ url('datatable') }}",dataSrc:""}
-            }
-    );
+        processing: true,
+        serverSide: true,
+        ajax:{
+        url: "{{ url('datatable') }}",
+        dataSrc:"",
+        },
+    });
 } );
 </script>
 </head>

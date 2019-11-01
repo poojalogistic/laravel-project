@@ -48,12 +48,13 @@ $(document).ready(function() {
     //     },
     // });
 
-    $('#example1').DataTable({
-                  processing: true,
-                  serverSide: true,
-                  ajax:{url:"{{ url('datatable') }}",dataSrc:""}
-            }
+    $('#example1').dataTable( {
+  "ajax": function (data, callback, settings) {
+    callback(
+      JSON.parse( localStorage.getItem('dataTablesData') )
     );
+  }
+} );
 } );
 </script>
 </head>

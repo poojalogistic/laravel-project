@@ -15,27 +15,15 @@
                     @endif
 
                     You are logged in!
-
-                    <table id="example1" class="display" cellspacing="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-            
-                    <tfoot>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
+                    <table>
                   
-                    
-                    </tbody>
+                    @foreach($users as $key => $data)
+                        <tr>    
+                        <th>{{$data->id}}</th>
+                        <th>{{$data->name}}</th>
+                        <th>{{$data->email}}</th>                
+                        </tr>
+                    @endforeach
                     </table>
                 </div>
             </div>

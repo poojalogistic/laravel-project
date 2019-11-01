@@ -20,5 +20,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/datatable', 'HomeController@datatable');
-// Route::resource('datatable', 'HomeController');
 
+Route::get('/home', function () {
+
+    $users = DB::table('users')->get();
+
+    return view('home', ['users' => $users]);
+});

@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\User;
 
 class HomeController extends Controller
 {
+    private $user;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user)
     {
+        $this->user = $user;
         $this->middleware('auth');
     }
 
@@ -24,13 +28,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = User::all();
+
+        return view('home', ['users' => $users]);
     }
 
      public function datatable()
      {
-        $users = User::all();
-        return $users;
-
+       
      }
 }

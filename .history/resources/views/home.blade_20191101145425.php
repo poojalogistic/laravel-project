@@ -34,7 +34,13 @@
                     </tfoot>
                     <tbody>
                   
-                    
+                    @foreach($users as $key => $data)
+                        <tr>    
+                        <th>{{$data->id}}</th>
+                        <th>{{$data->name}}</th>
+                        <th>{{$data->email}}</th>                
+                        </tr>
+                    @endforeach
                     </tbody>
                     </table>
                 </div>
